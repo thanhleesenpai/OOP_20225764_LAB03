@@ -5,3 +5,7 @@
 
 	Không, Java sẽ không cho phép bạn làm điều này nếu cả hai constructor chỉ có một tham số kiểu String. Điều này là do Java sẽ không thể phân biệt được hai phương thức constructor này vì chúng có cùng số lượng và kiểu dữ liệu của tham số.
 	Ta có thể khắc phục bằng cách thay đổi số lượng tham số khác nhau hoặc sử dụng kiểu dữ liệu khác nhau.
+
+
+
+____________________
