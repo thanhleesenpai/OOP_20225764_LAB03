@@ -1,4 +1,3 @@
-
 public class Cart {
 	public static final int MAX_NUMBERS_ORDERED = 20;
 	private DigitalVideoDisc[] itemsOrdered = 
@@ -35,5 +34,32 @@ public class Cart {
 	    }
 	    return total;
 	}
-}
 
+
+	public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
+        if (qtyOrdered + dvdList.length <= MAX_NUMBERS_ORDERED) {
+            for (DigitalVideoDisc dvd : dvdList) {
+                itemsOrdered[qtyOrdered] = dvd;
+                qtyOrdered++;
+            }
+            System.out.println("The list of discs has been added.");
+        } else {
+            System.out.println("The cart is almost full. Not enough space for all the discs.");
+        }
+    }
+    
+
+
+	public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+		if (qtyOrdered + 2 <= MAX_NUMBERS_ORDERED) {
+			itemsOrdered[qtyOrdered] = dvd1;
+			qtyOrdered++;
+			itemsOrdered[qtyOrdered] = dvd2;
+			qtyOrdered++;
+			System.out.println("The two discs have been added.");
+		} else {
+			System.out.println("The cart is almost full. Not enough space for both discs.");
+		}
+	}
+	
+}
