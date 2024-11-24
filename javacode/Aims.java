@@ -17,17 +17,5 @@ public class Aims {
 
         System.out.println("\nList after remove dvd2:");
         System.out.println("Total cost is: " + anOrder.totalCost());
-
-
-        DigitalVideoDisc dvd4 = new DigitalVideoDisc("A", "b", "c", 100, 200f);
-        DigitalVideoDisc dvd5 = new DigitalVideoDisc("d", "e", "f", 100, 100f);
-        DigitalVideoDisc[] dvdList = {dvd4, dvd5};
-        anOrder.addDigitalVideoDisc(dvdList);
-        System.out.println("\nAfter overloading part 1");
-        System.out.println("Total cost is: " + anOrder.totalCost());
-        DigitalVideoDisc dvd6 = new DigitalVideoDisc("g", "h", "i", 10, 20f);
-        anOrder.addDigitalVideoDisc(dvd1, dvd6);
-        System.out.println("\nAfter overloading part 2");
-        System.out.println("Total cost is: " + anOrder.totalCost());
     }
 }
