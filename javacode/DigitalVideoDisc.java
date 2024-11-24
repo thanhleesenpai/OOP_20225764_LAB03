@@ -8,7 +8,9 @@ public class DigitalVideoDisc {
 	private int length;
 	private float cost;
 	
-	
+	public int getId() {
+		return id;
+	}
 	public String getTitle() {
 		return title;
 	}
@@ -32,14 +34,14 @@ public class DigitalVideoDisc {
 		nbDigitalVideoDiscs++;
 		this.id = nbDigitalVideoDiscs;
 	}
-	public DigitalVideoDisc(String category, String title, float cost) {
+	public DigitalVideoDisc(String title, String category, float cost) {
 	    this.category = category;
 	    this.title = title;
 	    this.cost = cost;
 		nbDigitalVideoDiscs++;
 		this.id = nbDigitalVideoDiscs;
 	}
-	public DigitalVideoDisc(String director, String category, String title, float cost) {
+	public DigitalVideoDisc(String title, String category, String director, float cost) {
 	    this.director = director;
 	    this.category = category;
 	    this.title = title;
@@ -77,8 +79,20 @@ public class DigitalVideoDisc {
 		this.cost = cost;
 	}
 	public void setTitle(String title) {
-    		this.title = title;
+	    this.title = title;
 	}
+	public boolean isMatch(String title) {
+        return this.title.equalsIgnoreCase(title);
+    }
+	
+	public boolean isMatch(String title) {
+        return this.title.equalsIgnoreCase(title); // So sánh tiêu đề không phân biệt chữ hoa/thường
+    }
 
+    @Override
+    public String toString() {
+        return "DVD - " + title + " - " + (category != null ? category : "Unknown") + " - "
+                + (director != null ? director : "Unknown") + " - " + length + ": " + cost + "f";
+    }
 }
 
